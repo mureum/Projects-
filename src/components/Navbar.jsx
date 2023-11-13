@@ -1,5 +1,7 @@
 import React from 'react'
 import { AiOutlineMenu,AiOutlineSearch } from 'react-icons/ai'
+import {BsFillCartFill} from 'react-icons/bs'
+
 const Navbar = () => {
     return (
         <div className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
@@ -18,7 +20,10 @@ const Navbar = () => {
             <AiOutlineSearch size = {20}/>
             <input className='bg-transparent p-2 w-full focus:outline-none' type="text" placeholder='Search Clothes, Jewellery, etc...'/>     
         </div>
-        
+        {/* Shopping Basket */}
+        <button className='bg-black text-white md:flex items-center py-2'>
+           <BsFillCartFill/ > Shopping Basket     
+        </button>
         </div>
     )
 }
