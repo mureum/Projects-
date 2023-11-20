@@ -6,7 +6,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   return (
-    <div className='max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-r from-purple-500 to-blue-500'>
+    <div className='max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-r from-purple-500 to-blue-500 shadow-2xl'>
       <div className='flex items-center'>
         <div onClick={() => setNav(!nav)} className='cursor-pointer text-white'>
           <AiOutlineMenu size={30} />
@@ -25,8 +25,9 @@ const Navbar = () => {
         />
       </div>
       {/* Shopping Basket */}
-      <button className='bg-pink-500 text-white md:flex items-center py-2 px-4 rounded-full'>
-        <BsFillCartFill /> Shopping Basket
+      <button className='bg-pink-500 text-white md:flex items-center py-2 px-4 rounded-full gap-x-1.5'>
+        <BsFillCartFill />
+        <div>Shopping Basket</div>
       </button>
       {nav ? (
         <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div>
@@ -37,7 +38,7 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? 'fixed top-0 left-0 w-[300px] h-screen bg-gradient-to-r from-pink-500 to-purple-500 z-10 duration-300'
+            ? 'fixed top-0 left-0 w-[300px] h-screen bg-gradient-to-r from-pink-500 to-purple-500 z-10 duration-100'
             : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-gradient-to-r from-pink-500 to-purple-500 z-10 duration-300'
         }
       >
