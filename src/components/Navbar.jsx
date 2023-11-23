@@ -39,7 +39,7 @@ const Navbar = () => {
         className={
           nav
             ? 'fixed top-0 left-0 w-[300px] h-screen bg-gradient-to-r from-pink-500 to-purple-500 z-10 duration-100'
-            : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-gradient-to-r from-pink-500 to-purple-500 z-10 duration-300'
+            : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-gradient-to-r from-pink-500 to-purple-500 z-10 duration-00'
         }
       >
         <AiOutlineClose
