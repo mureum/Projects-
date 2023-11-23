@@ -15,9 +15,6 @@ const Hero = () => {
             </div>
             <img className='w-full max-h-[500px] object-cover' src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNsb3RoZXMlMjBoaWdoJTIwcmVzb2x1dGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="/" />
         </div>
-        <div>
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2xvdGhlcyUyMHNob3B8ZW58MHx8MHx8fDA%3D" alt="/" />
-        </div>
     </div>
     )
     }

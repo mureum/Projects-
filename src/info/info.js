@@ -1,4 +1,4 @@
-const Clothes = [
+export const info = [
     {
       id: 1,
       name: 'Casual Denim Jacket',
