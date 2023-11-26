@@ -11,8 +11,8 @@ const Navbar = () => {
         <div onClick={() => setNav(!nav)} className='cursor-pointer text-white'>
           <AiOutlineMenu size={30} />
         </div>
-        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold px-2 text-white'>
-          E <span className='text-yellow-400'>Clo</span>
+        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold px-2 text-black'>
+          <div class="font-custom">Culture Shock</div>
         </h1>
         {/* Search bar */}
       </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
           className='absolute right-4 top-4 cursor-pointer text-white'
         />
         <h2 className='text-4xl font-bold p-4 text-white'>
-          E <span className='text-yellow-400'>Clo</span>
+          <div class="font-custom">Culture Shock</div>
         </h2>
         <ul className='list-none'>
           <li className='py-2 px-4 border-b cursor-pointer text-white'>Orders</li>
