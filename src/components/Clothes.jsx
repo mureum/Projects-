@@ -6,7 +6,7 @@ const Clothes = () => {
 
     return (
         <div className='max-w-[1640px] m-auto px-4 py-12'>
-            <h1 className='text-blue-900 font-bold text-4xl text-center mb-8'>
+            <h1 className='text-blue-900 font-bold text-7xl text-center mb-8 '>
                Catalogue
             </h1>
 
