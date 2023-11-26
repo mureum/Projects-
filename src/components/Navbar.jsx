@@ -11,11 +11,11 @@ const Navbar = () => {
         <div onClick={() => setNav(!nav)} className='cursor-pointer text-white'>
           <AiOutlineMenu size={30} />
         </div>
-        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold px-2 text-black'>
+        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold px-10 text-black'>
           <div class="font-custom">Culture Shock</div>
         </h1>
-        {/* Search bar */}
       </div>
+      {/* Search bar */}
       <div className='bg-white/20 rounded-full flex items-center px-4 w-[250px] sm:w-[400px] lg:w-[500px] shadow-md'>
         <AiOutlineSearch size={20} className='text-white mr-2' />
         <input
