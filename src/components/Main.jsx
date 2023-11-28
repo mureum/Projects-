@@ -6,8 +6,8 @@ function Main({ onButtonClick }) {
       <h4 className='text-3xl sm:text-4xl lg:text-8xl font-bold px-10 py-10 text-white'>
           <div class="font-custom">Culture Shock</div>
       </h4>
-      <button className="bg-blue-500 text-white px-8 py-2 rounded" onClick={onButtonClick}>
-        Show Webpage
+      <button className="bg-blue-500 text-black px-8 py-2 rounded" onClick={onButtonClick}>
+      <div class="font-custom">Unveil the Cryptic Web of Culture Shock</div>
       </button>
     </div>
   );
