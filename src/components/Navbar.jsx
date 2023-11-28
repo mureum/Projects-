@@ -11,7 +11,7 @@ const Navbar = () => {
         <div onClick={() => setNav(!nav)} className='cursor-pointer text-white'>
           <AiOutlineMenu size={30} />
         </div>
-        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold px-10 text-black'>
+        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold px-10 text-white'>
           <div class="font-custom">Culture Shock</div>
         </h1>
       </div>
