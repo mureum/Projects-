@@ -19,6 +19,9 @@ label_password.grid(row=1, column=0, padx=10, pady=10, sticky=tk.W)
 entry_password = tk.Entry(root, show="*")
 entry_password.grid(row=1, column=1, padx=10, pady=10)
 
+# Create Login button
+login_button = tk.Button(root, text="Login", command=validate_login)
+login_button.grid(row=2, column=0, columnspan=2, pady=10)
 
 # Start the main event loop
 root.mainloop()
