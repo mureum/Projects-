@@ -1,6 +1,16 @@
 import tkinter as tk
 from tkinter import messagebox
 
+def validate_login():
+    username = entry_username.get()
+    password = entry_password.get()
+
+    # Added authentication 
+    if username == "user" and password == "password":
+        open_main_window()
+    else:
+        messagebox.showerror("Login Failed", "Invalid username or password")
+
 # Create main window
 root = tk.Tk()
 root.title("Login System")
