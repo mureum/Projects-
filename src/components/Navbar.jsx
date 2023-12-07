@@ -12,7 +12,7 @@ const Navbar = () => {
           <AiOutlineMenu size={30} />
         </div>
         <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold px-10 text-white'>
-          <div class="font-custom">Culture Shock</div>
+          <div class="font-custom">C u l t u r e S h o c k</div>
         </h1>
       </div>
       {/* Search bar */}
