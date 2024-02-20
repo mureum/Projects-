@@ -36,7 +36,11 @@ def getusername(username, password):
     if result is not None:
         profilename = result[0]
 
-
+def login():
+    a = login_username.get()
+    b = login_password.get()
+    getusername(a, b)
+    
 def appwindow():
     # The features of the application will be in this function
     pass
@@ -56,7 +60,7 @@ login_password = StringVar()
 e2 = Entry(root, font=("comic sans ms", 15), textvariable=login_password, show="*")
 e2.place(x=205, y=287, height=25, width=165)
 
-
+Button(root, text="Login", font=("Arial", 19), width=12, command=login).place(x=110, y=360)
 
 # Start the main event loop
 root.mainloop()
