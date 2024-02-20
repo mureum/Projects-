@@ -18,6 +18,14 @@ def connect():
 # Ensures database connection is established
 connect()
 
+# Adds user entries to the loginpage database
+def adduser(name, username, password):
+    conn = sqlite3.connect("loginpage.db")
+    cur = conn.cursor()
+    cur.execute("INSERT INTO users VALUES(?,?,?)", (name, username, password))
+    conn.commit()
+    conn.close()
+
 def appwindow():
     # The features of the application will be in this function
     pass
