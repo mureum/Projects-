@@ -1,2 +1,6 @@
 Tuesday 20/02/2024
-. Worked on adding login page.
+
+. Worked on Reworking login page.
+. I added functions that could retrieve a record of all users' usernames and passwords
+. These Entries then get stored on the login page database
+. I then Added a font to the username and password entries so they could look more presentable.
