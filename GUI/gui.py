@@ -26,6 +26,16 @@ def adduser(name, username, password):
     conn.commit()
     conn.close()
 
+# User can fetch their username from the loginpage database
+def getusername(username, password):
+    conn = sqlite3.connect("loginpage.db")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM users WHERE username=? AND password=?", (username, password))
+    result = cur.fetchone()
+    global profilename
+    if result is not None:
+        profilename = result[0]
+
 def appwindow():
     # The features of the application will be in this function
     pass
