@@ -36,6 +36,7 @@ def getusername(username, password):
     if result is not None:
         profilename = result[0]
 
+
 def appwindow():
     # The features of the application will be in this function
     pass
@@ -43,6 +44,17 @@ def appwindow():
 root = Tk()
 root.title("LOGIN")
 root.geometry("500x500")
+
+Label(root, font=("comic sans ms", 19), text="Username").place(x=80, y=230)
+Label(root, font=("comic sans ms", 19), text="Password").place(x=80, y=280)
+
+login_username = StringVar()
+e1 = Entry(root, font=("comic sans ms", 15), textvariable=login_username)
+e1.place(x=205, y=238, height=25, width=165)
+
+login_password = StringVar()
+e2 = Entry(root, font=("comic sans ms", 15), textvariable=login_password, show="*")
+e2.place(x=205, y=287, height=25, width=165)
 
 
 
