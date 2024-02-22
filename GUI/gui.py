@@ -60,6 +60,14 @@ def register():
     reg_password.delete(0, END)
     reg_repassword.delete(0, END)
     reg_name.delete(0, END)
+
+# Verifies user 
+def checkuser(username, password):
+    conn = sqlite3.connect("loginpage.db")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM users WHERE username=? AND password=?", (username, password))
+    result = cur.fetchone()
+    return result
     
 def appwindow():
     # The features of the application will be in this function
