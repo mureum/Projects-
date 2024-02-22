@@ -37,13 +37,14 @@ def getusername(username, password):
         profilename = result[0]
 
 def login():
-    a = login_username.get()
-    b = login_password.get()
-    getusername(a, b)
+    username = login_username.get()
+    password = login_password.get()
+    getusername(username, password)
     
 def appwindow():
     # The features of the application will be in this function
     pass
+
 
 root = Tk()
 root.title("LOGIN")
@@ -53,12 +54,12 @@ Label(root, font=("comic sans ms", 19), text="Username").place(x=80, y=230)
 Label(root, font=("comic sans ms", 19), text="Password").place(x=80, y=280)
 
 login_username = StringVar()
-e1 = Entry(root, font=("comic sans ms", 15), textvariable=login_username)
-e1.place(x=205, y=238, height=25, width=165)
+log_username = Entry(root, font=("comic sans ms", 15), textvariable=login_username)
+log_username.place(x=205, y=238, height=25, width=165)
 
 login_password = StringVar()
-e2 = Entry(root, font=("comic sans ms", 15), textvariable=login_password, show="*")
-e2.place(x=205, y=287, height=25, width=165)
+log_password = Entry(root, font=("comic sans ms", 15), textvariable=login_password, show="*")
+log_password.place(x=205, y=287, height=25, width=165)
 
 Button(root, text="Login", font=("Arial", 19), width=12, command=login).place(x=110, y=360)
 
