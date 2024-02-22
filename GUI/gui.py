@@ -41,6 +41,13 @@ def login():
     username = login_username.get()
     password = login_password.get()
     getusername(username, password)
+    if (checkuser(username,password))!=None:
+        root.destroy()
+        appwindow()     
+    else:
+        log_username.delete(0,END)
+        log_password.delete(0,END)
+        messagebox.showinfo('oops something wrong', 'Invalid credentials')
 
 # Allows for registration and authentication
 def register():
