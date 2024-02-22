@@ -42,6 +42,7 @@ def login():
     password = login_password.get()
     getusername(username, password)
 
+# Allows for registration and authentication
 def register():
     name = register_name.get()
     username = register_username.get()
@@ -105,5 +106,9 @@ register_repassword = StringVar()
 reg_repassword = Entry(root, font=("adobe clean", 15), textvariable=register_repassword, show="*")
 reg_repassword.place(x=740, y=350, height=25, width=165)
 
+Button(root, text="Register", font=("adobe clean", 19), width=12, command=register).place(x=630, y=400)
+
+
 # Start the main event loop
+root.resizable(False, False)
 root.mainloop()
