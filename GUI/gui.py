@@ -48,8 +48,9 @@ def appwindow():
 
 root = Tk()
 root.title("LOGIN")
-root.geometry("500x500")
+root.geometry("1000x700")
 
+# Username and password section
 Label(root, font=("comic sans ms", 19), text="Username").place(x=80, y=230)
 Label(root, font=("comic sans ms", 19), text="Password").place(x=80, y=280)
 
@@ -61,7 +62,29 @@ login_password = StringVar()
 log_password = Entry(root, font=("comic sans ms", 15), textvariable=login_password, show="*")
 log_password.place(x=205, y=287, height=25, width=165)
 
-Button(root, text="Login", font=("Arial", 19), width=12, command=login).place(x=110, y=360)
+Button(root, text="Login", font=("comic sans ms", 19), width=12, command=login).place(x=110, y=360)
+
+# Registration Section 
+Label(root, font=("comic sans ms", 19), text="Name").place(x=653, y=195)
+Label(root, font=("comic sans ms", 19), text="Username").place(x=604, y=243)
+Label(root, font=("comic sans ms", 19), text="Password").place(x=610, y=293)
+Label(root, font=("comic sans ms", 17), text="Confirm password").place(x=532, y=342)
+
+register_name = StringVar()
+reg_name = Entry(root, font=("adobe clean", 15), textvariable=register_name)
+reg_name.place(x=740, y=200, height=25, width=165)
+
+register_username = StringVar()
+reg_username = Entry(root, font=("adobe clean", 15), textvariable=register_username)
+reg_username.place(x=740, y=250, height=25, width=165)
+
+register_password = StringVar()
+reg_password = Entry(root, font=("adobe clean", 15), textvariable=register_password, show="*")
+reg_password.place(x=740, y=300, height=25, width=165)
+
+register_repassword = StringVar()
+reg_repassword = Entry(root, font=("adobe clean", 15), textvariable=register_repassword, show="*")
+reg_repassword.place(x=740, y=350, height=25, width=165)
 
 # Start the main event loop
 root.mainloop()
