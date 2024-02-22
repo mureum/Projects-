@@ -1,5 +1,6 @@
 from tkinter import *
 import sqlite3
+from tkinter import messagebox
 
 # Created a database connection to store user data in the "loginpage" database 
 
@@ -40,6 +41,24 @@ def login():
     username = login_username.get()
     password = login_password.get()
     getusername(username, password)
+
+def register():
+    name = register_name.get()
+    username = register_username.get()
+    password = register_password.get()
+    repassword = register_repassword.get()
+    if password == repassword and password != "" and len(password) > 5 and name != "" and username != "":
+        adduser(name, username, password)
+        messagebox.showinfo(':)', 'Registration Successful')
+    else:
+        if name == "" or username == "" or password == "" or repassword == "":
+            messagebox.showinfo('oops something wrong', 'Field should not be empty')
+        else:
+            messagebox.showinfo('oops something wrong', 'Both passwords should be the same! \nPassword should contain at least 6 characters')
+    reg_username.delete(0, END)
+    reg_password.delete(0, END)
+    reg_repassword.delete(0, END)
+    reg_name.delete(0, END)
     
 def appwindow():
     # The features of the application will be in this function
