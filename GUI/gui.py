@@ -122,7 +122,8 @@ reg_repassword = Entry(root, font=("adobe clean", 15), textvariable=register_rep
 reg_repassword.place(x=740, y=350, height=25, width=165)
 
 Button(root, text="Register", font=("adobe clean", 19), width=12, command=register).place(x=630, y=400)
-
+Button(root, text="Delete all users", font=("candara", 15, "bold")).place(x=130, y=620)
+Button(root, text="View all users", font=("candara", 15, "bold")).place(x=130, y=560)
 
 # Start the main event loop
 root.resizable(False, False)
