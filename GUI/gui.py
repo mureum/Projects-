@@ -86,6 +86,15 @@ def viewallusers():
     conn.close()
     return rows
 
+# Deletes all records of users from the database
+def deleteallusers():
+    conn = sqlite3.connect("loginpage.db")
+    cur = conn.cursor()
+    cur.execute("DELETE FROM users")
+    conn.commit()
+    conn.close()
+    messagebox.showinfo('Successful', 'All users deleted')
+
 def viewwindow():
     gui = Toplevel(root)
     gui.title("VIEW ALL USERS")
@@ -148,7 +157,7 @@ reg_repassword = Entry(root, font=("adobe clean", 15), textvariable=register_rep
 reg_repassword.place(x=740, y=350, height=25, width=165)
 
 Button(root, text="Register", font=("adobe clean", 19), width=12, command = register).place(x=630, y=400)
-Button(root, text="Delete all users", font=("candara", 15, "bold")).place(x=130, y=620)
+Button(root, text="Delete all users", font=("candara", 15, "bold"), command=deleteallusers).place(x=130, y=620)
 Button(root, text="View all users", font=("candara", 15, "bold"),command = viewwindow).place(x=130, y=560)
 
 # Start the main event loop
