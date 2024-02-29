@@ -75,6 +75,32 @@ def checkuser(username, password):
     cur.execute("SELECT * FROM users WHERE username=? AND password=?", (username, password))
     result = cur.fetchone()
     return result
+
+# Selects all users in the login database.
+def viewallusers():
+    conn = sqlite3.connect("loginpage.db")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM users")
+    rows = cur.fetchall()
+    conn.commit()
+    conn.close()
+    return rows
+
+def viewwindow():
+    gui = Toplevel(root)
+    gui.title("VIEW ALL USERS")
+    gui.geometry("800x700")
+    Message(gui, font=("Castellar", 22, "bold"), text="NAME      USERNAME      PASSWORD", width=700).pack()
+    for row in viewallusers():
+        a = row[0]
+        b = row[1]
+        c = ""
+        f = len(row[2])
+        for i in range(f):
+            c = c + "*"
+        d = a + "         " + b + "           " + c
+        Message(gui, font=("adobe clean", 25, "bold"), text=d, width=700).pack()
+    Button(gui, text="Exit Window", font=("candara", 15, "bold"), command=gui.destroy).pack()
     
 def appwindow():
     # The features of the application will be in this function
@@ -121,9 +147,9 @@ register_repassword = StringVar()
 reg_repassword = Entry(root, font=("adobe clean", 15), textvariable=register_repassword, show="*")
 reg_repassword.place(x=740, y=350, height=25, width=165)
 
-Button(root, text="Register", font=("adobe clean", 19), width=12, command=register).place(x=630, y=400)
+Button(root, text="Register", font=("adobe clean", 19), width=12, command = register).place(x=630, y=400)
 Button(root, text="Delete all users", font=("candara", 15, "bold")).place(x=130, y=620)
-Button(root, text="View all users", font=("candara", 15, "bold")).place(x=130, y=560)
+Button(root, text="View all users", font=("candara", 15, "bold"),command = viewwindow).place(x=130, y=560)
 
 # Start the main event loop
 root.resizable(False, False)
