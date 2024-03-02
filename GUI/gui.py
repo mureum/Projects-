@@ -112,7 +112,13 @@ def viewwindow():
     Button(gui, text="Exit Window", font=("candara", 15, "bold"), command=gui.destroy).pack()
     
 def appwindow():
-    # The features of the application will be in this function
+    def connect1():
+        conn=sqlite3.connect("budgetapp.db")
+        cur=conn.cursor()
+        cur.execute("CREATE TABLE IF NOT EXISTS budgettable(id INTEGER PRIMARY KEY,itemname TEXT,date TEXT,cost TEXT)")
+        conn.commit()
+        conn.close()
+    connect1()
     pass
 
 
