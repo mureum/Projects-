@@ -3,3 +3,8 @@ Thursday 29/02/2024
 . Took a short break due to relocation.
 . Actually implemented the viewallusers() function.
 . Also implemented the deleteallusers() function.
+
+Saturday 02/03/2024
+
+. Created a table which will store the items the user inputs.
+. Planned how this feature will fit in with all the other features I'll add.
