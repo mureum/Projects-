@@ -119,9 +119,10 @@ def appwindow():
         conn.commit()
         conn.close()
     connect1()
-    pass
-
-
+    
+    gui = Tk()
+    gui.title("Budget Manager")
+    gui.geometry("900x700")
 root = Tk()
 root.title("LOGIN")
 root.geometry("1000x700")
