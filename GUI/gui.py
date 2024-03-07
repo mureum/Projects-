@@ -123,6 +123,8 @@ def appwindow():
     gui = Tk()
     gui.title("Budget Manager")
     gui.geometry("900x700")
+    Label(gui,font=("comic sans ms",17),text="Product name").place(x=10,y=150)
+
 root = Tk()
 root.title("LOGIN")
 root.geometry("1000x700")
