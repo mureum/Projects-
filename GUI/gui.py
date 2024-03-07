@@ -124,7 +124,9 @@ def appwindow():
     gui.title("Budget Manager")
     gui.geometry("900x700")
     Label(gui,font=("comic sans ms",17),text="Product name").place(x=10,y=150)
-
+    exp_itemname = StringVar()
+    product_name = Entry(gui,font=("comic sans ms",15),textvariable=exp_itemname)
+    product_name.place(x=220,y=155,height=27,width=165)
 root = Tk()
 root.title("LOGIN")
 root.geometry("1000x700")
