@@ -126,6 +126,15 @@ def appwindow():
         cur.execute("INSERT INTO budgettable VALUES(NULL,?,?,?)",(itemname,date,cost))
         conn.commit()
         conn.close()
+    
+    def view():
+        conn=sqlite3.connect("budgetapp.db")
+        cur=conn.cursor()
+        cur.execute("SELECT * FROM budgettable")
+        rows=cur.fetchall()
+        conn.commit()
+        conn.close()
+        return rows
 
     def insertitems():
         a=exp_itemname.get()
@@ -146,6 +155,17 @@ def appwindow():
             product_date.delete(0,END)
             product_cost.delete(0,END)
         list.delete(0,END)
+    
+    def viewallitems():
+        list.delete(0,END)
+        list.insert(END,"ID   NAME     DATE      COST")
+        for row in view():
+            a=str(row[0])
+            b=str(row[1])
+            c=str(row[2])
+            d=str(row[3])
+            f= a + "     " + b + "    " + c + "    " + d
+            list.insert(END,f)
     
     gui = Tk()
     gui.title("Budget Manager")
@@ -171,7 +191,7 @@ def appwindow():
     list.place(x=168,y=410)
     scroll_bar.config( command = list.yview )
     Button(gui,text="Add Item",font=("comic sans ms",17),width=10,command=insertitems).place(x=30,y=300)
-    Button(gui,text="View all items",font=("comic sans ms",17), width=12).place(x=110,y=355)
+    Button(gui,text="View all items",font=("comic sans ms",17), width=12,command=viewallitems).place(x=110,y=355)
 root = Tk()
 root.title("LOGIN")
 root.geometry("1000x700")
