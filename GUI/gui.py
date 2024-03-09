@@ -119,6 +119,33 @@ def appwindow():
         conn.commit()
         conn.close()
     connect1()
+
+    def insert(itemname,date,cost):
+        conn=sqlite3.connect("budgetapp.db")
+        cur=conn.cursor()
+        cur.execute("INSERT INTO budgettable VALUES(NULL,?,?,?)",(itemname,date,cost))
+        conn.commit()
+        conn.close()
+
+    def insertitems():
+        a=exp_itemname.get()
+        b=purchase_date.get()
+        c=purchase_cost.get()
+        d=c.replace('.', '', 1)
+        e=b.count('-')      
+
+        if a=="" or b=="" or c=="":
+            messagebox.showinfo("oops something wrong","Field should not be empty")
+        elif len(b)!=10 or e!=2:
+            messagebox.showinfo("oops something wrong","DATE should be in format dd-mm-yyyy")
+        elif (d.isdigit()==False):
+            messagebox.showinfo("oops something wrong","Cost should be a number")
+        else:
+            insert(a,b,c)
+            product_name.delete(0,END)
+            product_date.delete(0,END)
+            product_cost.delete(0,END)
+        list.delete(0,END)
     
     gui = Tk()
     gui.title("Budget Manager")
@@ -143,7 +170,7 @@ def appwindow():
     list = Listbox(gui,height=7,width=30,font=("comic sans ms",20),yscrollcommand = scroll_bar.set)
     list.place(x=168,y=410)
     scroll_bar.config( command = list.yview )
-    Button(gui,text="Add Item",font=("comic sans ms",17),width=10).place(x=30,y=300)
+    Button(gui,text="Add Item",font=("comic sans ms",17),width=10,command=insertitems).place(x=30,y=300)
 root = Tk()
 root.title("LOGIN")
 root.geometry("1000x700")
