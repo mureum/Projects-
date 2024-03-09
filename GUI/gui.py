@@ -143,6 +143,7 @@ def appwindow():
     list = Listbox(gui,height=7,width=30,font=("comic sans ms",20),yscrollcommand = scroll_bar.set)
     list.place(x=168,y=410)
     scroll_bar.config( command = list.yview )
+    Button(gui,text="Add Item",font=("comic sans ms",17),width=10).place(x=30,y=300)
 root = Tk()
 root.title("LOGIN")
 root.geometry("1000x700")
