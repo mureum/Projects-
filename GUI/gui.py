@@ -157,15 +157,15 @@ def appwindow():
         list.delete(0,END)
     
     def viewallitems():
-        list.delete(0,END)
-        list.insert(END,"ID   NAME     DATE      COST")
-        for row in view():
-            a=str(row[0])
-            b=str(row[1])
-            c=str(row[2])
-            d=str(row[3])
-            f= a + "     " + b + "    " + c + "    " + d
-            list.insert(END,f)
+        list.delete(0, END)
+        list.insert(END, "ID   NAME     DATE      COST")
+        for item in view():  
+            item_id = str(item[0])
+            item_name = str(item[1])
+            item_date = str(item[2])
+            item_cost = str(item[3])
+            formatted_item = item_id + "     " + item_name + "    " + item_date + "    " + item_cost
+            list.insert(END, formatted_item)
     
     gui = Tk()
     gui.title("Budget Manager")
