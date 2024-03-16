@@ -192,6 +192,8 @@ def appwindow():
     scroll_bar.config( command = list.yview )
     Button(gui,text="Add Item",font=("comic sans ms",17),width=10,command=insertitems).place(x=30,y=300)
     Button(gui,text="View all items",font=("comic sans ms",17), width=12,command=viewallitems).place(x=110,y=355)
+    Button(gui,text="Delete all items",font=("comic sans ms",17),width=15).place(x=550,y=280)
+
 root = Tk()
 root.title("LOGIN")
 root.geometry("1000x700")
