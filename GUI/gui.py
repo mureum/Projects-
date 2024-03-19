@@ -167,6 +167,15 @@ def appwindow():
             formatted_item = item_id + "     " + item_name + "    " + item_date + "    " + item_cost
             list.insert(END, formatted_item)
     
+    def deletealldata():
+        conn=sqlite3.connect("budgetapp.db")
+        cur=conn.cursor()
+        cur.execute("DELETE FROM budgettable")
+        conn.commit()
+        conn.close()
+        list.delete(0,END)
+        messagebox.showinfo('Successful', 'All data deleted')
+    
     gui = Tk()
     gui.title("Budget Manager")
     gui.geometry("900x700")
@@ -192,7 +201,7 @@ def appwindow():
     scroll_bar.config( command = list.yview )
     Button(gui,text="Add Item",font=("comic sans ms",17),width=10,command=insertitems).place(x=30,y=300)
     Button(gui,text="View all items",font=("comic sans ms",17), width=12,command=viewallitems).place(x=110,y=355)
-    Button(gui,text="Delete all items",font=("comic sans ms",17),width=15).place(x=550,y=280)
+    Button(gui,text="Delete all items",font=("comic sans ms",17),width=15,command=deletealldata).place(x=550,y=280)
 
 root = Tk()
 root.title("LOGIN")
