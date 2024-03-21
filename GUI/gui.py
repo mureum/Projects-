@@ -175,6 +175,29 @@ def appwindow():
         conn.close()
         list.delete(0,END)
         messagebox.showinfo('Successful', 'All data deleted')
+
+    def search(itemname="",date="",cost=""):
+        conn = sqlite3.connect("budgetapp.db")
+        cur = conn.cursor()
+        cur.execute("SELECT *FROM budgettable WHERE itemname=? OR date=? OR cost=?",(itemname,date,cost))
+        rows = cur.fetchall()
+        conn.commit()
+        conn.close()
+        return rows
+    
+    def search_item():
+        list.delete(0,END)
+        list.insert(END,"ID   NAME     DATE      COST")
+        for row in search(exp_itemname.get(),purchase_date.get(),purchase_cost.get()):
+            item_id = str(row[0])
+            item_name = str(row[1])
+            date = str(row[2])
+            cost = str(row[3])
+            formatted_row = item_id + "     " + item_name + "    " + date + "    " + cost
+            list.insert(END, formatted_row)
+        product_name.delete(0,END)
+        product_date.delete(0,END)
+        product_cost.delete(0,END)
     
     gui = Tk()
     gui.title("Budget Manager")
@@ -202,6 +225,7 @@ def appwindow():
     Button(gui,text="Add Item",font=("comic sans ms",17),width=10,command=insertitems).place(x=30,y=300)
     Button(gui,text="View all items",font=("comic sans ms",17), width=12,command=viewallitems).place(x=110,y=355)
     Button(gui,text="Delete all items",font=("comic sans ms",17),width=15,command=deletealldata).place(x=550,y=280)
+    Button(gui,text="Search",font=("comic sans ms",17),width=10,command=search_item).place(x=220,y=298)
 
 root = Tk()
 root.title("LOGIN")
