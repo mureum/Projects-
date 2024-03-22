@@ -198,6 +198,19 @@ def appwindow():
         product_name.delete(0,END)
         product_date.delete(0,END)
         product_cost.delete(0,END)
+
+    def sumofitems():
+        conn = sqlite3.connect("budgetapp.db")
+        cur = conn.cursor()
+        cur.execute("SELECT SUM(cost) FROM budgettable")
+        total_sum = cur.fetchone()
+        list.delete(0, END)
+        total_cost_str = str(total_sum[0])
+        message = "YOU SPENT " + total_cost_str
+        messagebox.showinfo('TOTAL SPENT', message)
+        conn.commit()
+        conn.close()
+        return total_sum
     
     gui = Tk()
     gui.title("Budget Manager")
@@ -226,6 +239,7 @@ def appwindow():
     Button(gui,text="View all items",font=("comic sans ms",17), width=12,command=viewallitems).place(x=110,y=355)
     Button(gui,text="Delete all items",font=("comic sans ms",17),width=15,command=deletealldata).place(x=550,y=280)
     Button(gui,text="Search",font=("comic sans ms",17),width=10,command=search_item).place(x=220,y=298)
+    Button(gui,text="Total spent",font=("Ariel",17),width=15,command=sumofitems).place(x=550,y=340)
 
 root = Tk()
 root.title("LOGIN")
