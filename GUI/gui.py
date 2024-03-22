@@ -1,3 +1,4 @@
+import time
 from tkinter import *
 import sqlite3
 from tkinter import messagebox
@@ -241,7 +242,18 @@ def appwindow():
     Button(gui,text="Delete all items",font=("comic sans ms",17),width=15,command=deletealldata).place(x=550,y=280)
     Button(gui,text="Search",font=("comic sans ms",17),width=10,command=search_item).place(x=220,y=298)
     Button(gui,text="Total spent",font=("Ariel",17),width=15,command=sumofitems).place(x=550,y=340)
-    
+    Label(gui,width=60,font=("century",35),text="EXPENSE  TRACKER").place(x=-450,y=0)
+    name = "Welcome, " + profilename
+    Label(gui,width=60,font=("Ariel",30),text=name).place(x=-530,y=61)
+    ltime=Label(gui,font=("Ariel",30))
+    ltime.place(x=470,y=61)
+    def digitalclock():
+        text_input = time.strftime("%d-%m-%Y   %H:%M:%S")
+        ltime.config(text=text_input)
+        ltime.after(1000, digitalclock)
+    digitalclock()
+    gui.resizable(False, False)
+    gui.mainloop()
 
 root = Tk()
 root.title("LOGIN")
