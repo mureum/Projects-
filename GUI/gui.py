@@ -225,6 +225,7 @@ def appwindow():
     product_date.place(x=220,y=205,height=27,width=165)
     Label(gui,font=("comic sans ms",17),text="Cost of product").place(x=10,y=250)
     purchase_cost = StringVar()
+    Label(gui,font=("comic sans ms",17),text="Select ID to delete").place(x=520,y=170)
     product_cost = Entry(gui,font=("comic sans ms",15),textvariable=purchase_cost)
     product_cost.place(x=220,y=255,height=27,width=165)
     scroll_bar=Scrollbar(gui)
@@ -240,6 +241,7 @@ def appwindow():
     Button(gui,text="Delete all items",font=("comic sans ms",17),width=15,command=deletealldata).place(x=550,y=280)
     Button(gui,text="Search",font=("comic sans ms",17),width=10,command=search_item).place(x=220,y=298)
     Button(gui,text="Total spent",font=("Ariel",17),width=15,command=sumofitems).place(x=550,y=340)
+    
 
 root = Tk()
 root.title("LOGIN")
