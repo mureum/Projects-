@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { GiAbstract044 } from "react-icons/gi";
+import { GiBrightExplosion } from "react-icons/gi";
 import Button from "../layouts/Button";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className="flex flex-row justify-between p-5 md:px-32 px-5 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
             <div className="flex flex-row items-center cursor-pointer">
               <span>
-                <GiAbstract044 size={32} />
+              <GiBrightExplosion size={32}/>
               </span>
               <h1 className="text-xl font-semibold">Culture Shock</h1>
             </div>
