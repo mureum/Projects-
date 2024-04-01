@@ -1,15 +1,23 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-
+import Clothes from "./components/Clothes";
 
 const App = () => {
   return (
     <div>
       <Navbar />
+
+     
       <div id="home">
-          <Home />
-        </div>
+        <Home />
+      </div>
+
+      <div id="clothes">
+        <Clothes />
+      </div>
+
+      
 
     </div>
   );
