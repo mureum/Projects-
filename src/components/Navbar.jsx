@@ -48,7 +48,7 @@ const Navbar = () => {
               <div className="relative group">
                 <div className="flex items-center gap-1">
                   <Link
-                    to="dishes"
+                    to="clothes"
                     spy={true}
                     smooth={true}
                     duration={500}
@@ -63,7 +63,7 @@ const Navbar = () => {
                 <ul className="absolute hidden space-y-2 group-hover:block bg-white border border-gray-300 rounded-lg p-5">
                   <li>
                     <Link
-                      to="dishes"
+                      to="clothes"
                       spy={true}
                       smooth={true}
                       duration={500}
@@ -74,7 +74,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      to="dishes"
+                      to="clothes"
                       spy={true}
                       smooth={true}
                       duration={500}
@@ -85,7 +85,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      to="dishes"
+                      to="clothes"
                       spy={true}
                       smooth={true}
                       duration={500}
@@ -96,7 +96,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      to="dishes"
+                      to="clothes"
                       spy={true}
                       smooth={true}
                       duration={500}
@@ -119,7 +119,7 @@ const Navbar = () => {
               </Link>
 
               <Link
-                to="menu"
+                to="catalogue"
                 spy={true}
                 smooth={true}
                 duration={500}
@@ -161,7 +161,7 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              to="dishes"
+              to="clothes"
               spy={true}
               smooth={true}
               duration={500}
@@ -181,7 +181,7 @@ const Navbar = () => {
               About
             </Link>
             <Link
-              to="menu"
+              to="catalogue"
               spy={true}
               smooth={true}
               duration={500}
