@@ -90,7 +90,15 @@ input {
     background-color: #fff;
     color: #333; /* Change text color for white background */
 }
-
+.colorOption:nth-child(9) {
+    background-color: #88fa06;
+}
+.colorOption:nth-child(10) {
+    background-color: #0ddbf7;
+}
+.colorOption:nth-child(11) {
+    background-color: #f012c0;
+}
 button {
     border: none;
     outline: none;
