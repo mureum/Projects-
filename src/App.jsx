@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Catalogue from "./components/Catalogue";
 import Clothes from "./components/Clothes";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -27,8 +28,11 @@ const App = () => {
           <Catalogue />
         </div>
 
+
+
       </main>
 
+      <Footer />
     </div>
   );
 };
