@@ -1,5 +1,7 @@
 import React from "react";
 import ReviewCard from "../layouts/ReviewCard";
+import ReviewCard1 from "../layouts/ReviewCard1";
+import ReviewCard2 from "../layouts/ReviewCard2";
 import img1 from "../assets/img/pic1.png";
 import img2 from "../assets/img/pic2.png";
 import img3 from "../assets/img/pic3.png";
@@ -12,8 +14,8 @@ const Review = () => {
       </h1>
       <div className=" flex flex-col md:flex-row gap-5 mt-5">
         <ReviewCard img={img1} name="Cleopatra Wang" />
-        <ReviewCard img={img2} name="Jack Hillington" />
-        <ReviewCard img={img3} name="Becky Davoren" />
+        <ReviewCard1 img={img2} name="Jack Hillington" />
+        <ReviewCard2 img={img3} name="Becky Davoren" />
       </div>
     </div>
   );
