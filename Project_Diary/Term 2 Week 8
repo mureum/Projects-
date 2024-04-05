@@ -1,0 +1,16 @@
+Thursday 07/03/2024
+
+.Added a scroll bar with a Lisbox for purchased product items.
+.Added product cost Label and Entry.
+.Added purchase date of product.
+.Added Entry box for product name.
+.Added product name label.
+
+Friday 07/03/2024
+.Added a spinbox
+
+Saturday 09/03/2024
+.Added all viewable items to the "budgettable" in the database record.
+.Added button that will be able to view all items.
+Added product name, cost and price to "budgettable" record.
+.Created a button that will allow items to be added.

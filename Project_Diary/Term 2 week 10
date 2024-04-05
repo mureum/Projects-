@@ -1,0 +1,21 @@
+Tuesday 19/03/2024
+
+.Button deletes all items.
+
+Thursday 21/03/2024
+
+.Added a search functionality.
+
+Friday 22/03/2024
+
+.Added title and real time to application window.
+.Optimised delete id text
+.Added a button that checks the sum of items.
+
+Saturday 23/03/2024
+.Added canvas functionality with color options, clear and save buttons, brush size control, and emoji picker.
+.Created title of webpage.
+
+Sunday 24/03/2024
+.Implemented canvas drawing functionality with colour selection, brush size adjustment, clear and save features.
+.Enhanced navigation bar styling and improved user interaction with smooth transitions. Adjusted colour options for better visibility and added hover effects. Increased button padding, rounded corners, and font size for better readability. Improved colour input styling. Updated brush size input and output appearance. Optimised emoji styling for improved visual presentation.
