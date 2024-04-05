@@ -5,6 +5,7 @@ import About from "./components/About";
 import Catalogue from "./components/Catalogue";
 import Clothes from "./components/Clothes";
 import Footer from "./components/Footer";
+import Review from "./components/Review";
 
 const App = () => {
   return (
@@ -28,10 +29,15 @@ const App = () => {
           <Catalogue />
         </div>
 
+        <div>
+          <Review />
+        </div>
 
 
       </main>
-
+      <div>
+        <br />
+      </div>
       <Footer />
     </div>
   );
