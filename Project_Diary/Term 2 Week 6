@@ -1,0 +1,18 @@
+Tuesday 20/02/2024
+
+. Worked on Reworking login page.
+. I added functions that could retrieve a record of all users' usernames and passwords
+. These Entries then get stored on the login page database
+. I then Added a font to the username and password entries so they could look more presentable.
+
+Thursday 22/02/2024
+
+. I cleaned up unncessary files that were within the GUI branch.
+. I added the registration section 
+. I added authentication function to the database.
+. For this I had to utilise different SQL commands.
+
+Sunday 25/02/2024
+
+. Added buttons for viewing and deleting users.
+. Plan to add the functionality in the next couple of days.

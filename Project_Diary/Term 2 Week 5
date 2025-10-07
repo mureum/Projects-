@@ -1,0 +1,9 @@
+Wednesday 14/02/2024
+. Once again had personal duties I had to attend to, hence the little hiatus.
+. Imported SQLite3 to python GUI budget manager as I will need a record of transactions from the user.
+
+Saturday 17/02/2024
+. Went over SQL again to jog my memory on how to utilise it.
+. I also learnt how to create database connections in Python 
+. Created a database connection called "databaselogin"
+. Added a table to record user entries -> Username/Password ect ...
